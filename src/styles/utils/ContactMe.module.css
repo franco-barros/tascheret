@@ -1,0 +1,163 @@
+/* Contenedor general */
+.contactSection {
+  padding: 4rem 1.5rem;
+  background-color: #19233f;
+  color: #fff;
+  text-align: center;
+}
+
+/* Wrapper para centrar badge */
+.badgeWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* Badge centrado */
+.badge {
+  display: inline-block;
+  background-color: #c7ae7d;
+  color: #19233f;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+/* Título */
+.heading {
+  font-size: 2.5rem;
+  font-family: var(--font-title, serif);
+  color: #c7ae7d;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Subtítulo */
+.subHeading {
+  font-size: 1.1rem;
+  color: #e0d6b9;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Contenedor columnas info + formulario */
+.contactWrapper {
+  display: flex;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  justify-content: center; /* centrado horizontal */
+  align-items: stretch; /* para que ambas cards tengan la misma altura */
+  text-align: left;
+}
+
+/* Card blanca para ambos lados */
+.card {
+  background-color: #ffffff; /* blanco */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  color: #19233f; /* texto oscuro para contraste */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 320px; /* ancho mínimo */
+}
+
+/* Título con iconos en cada card */
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c7ae7d;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Info contacto */
+.contactInfo {
+  color: #19233f;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Títulos sección info con íconos */
+.infoTitle {
+  color: #c7ae7d;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Formulario */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+/* Inputs y textarea */
+.inputField,
+.textAreaField {
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #c7ae7d;
+  background-color: transparent;
+  color: #19233f; /* texto oscuro para leer en fondo blanco */
+  font-size: 1rem;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.inputField:focus,
+.textAreaField:focus {
+  outline: none;
+  border-color: #e6cf9c;
+  background-color: rgba(199, 174, 125, 0.15);
+}
+
+.textAreaField {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Botón */
+.submitButton {
+  background-color: #c7ae7d;
+  color: #19233f;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* empuja el botón abajo */
+}
+
+.submitButton:hover {
+  background-color: #b89b64;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contactWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contactInfo {
+    margin-bottom: 2rem;
+  }
+  .card {
+    padding: 1.5rem;
+    min-width: 100%;
+  }
+}

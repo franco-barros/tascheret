@@ -1,0 +1,44 @@
+.blogSection {
+  background-color: #fff;
+  padding: 3rem 1.5rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #d4af37; /* dorado */
+  color: #222;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.title span {
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

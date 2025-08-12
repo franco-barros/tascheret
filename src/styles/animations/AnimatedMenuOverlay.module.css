@@ -1,0 +1,76 @@
+.menuOverlayContainer {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 35, 63, 0.85); /* Fondo semi-transparente azul oscuro */
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+/* Menú animado: ocupa toda la pantalla */
+.animatedMenu {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #c7ae7d 0%,
+    #b89b64 50%,
+    #d0b86f 100%
+  ); /* gradiente dorado/verde suave */
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botón de cerrar */
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #19233f; /* color texto oscuro */
+  cursor: pointer;
+  z-index: 1010;
+  transition: transform 0.2s ease;
+}
+.closeButton:hover {
+  transform: scale(1.2);
+  color: #b89b64; /* color hover dorado */
+}
+
+/* Ítems del menú */
+.menuItemsContainer {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.menuItem {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #19233f; /* texto oscuro */
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menuItem:hover {
+  background-color: rgba(199, 174, 125, 0.15); /* hover suave dorado */
+  color: #b89b64; /* texto dorado en hover */
+}
+
+.activeItem {
+  color: #19233f; /* color activo dorado */
+  font-weight: 700;
+}

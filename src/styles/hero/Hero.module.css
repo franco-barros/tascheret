@@ -1,0 +1,65 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background: url("/images/persona.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: center;
+  color: white;
+  background: rgba(25, 35, 63, 0.6); /* Azul oscuro con transparencia */
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btnPrimary {
+  background-color: #c7ae7d;
+  color: #19233f;
+}
+
+.btnPrimary:hover {
+  background-color: #b79d6d;
+}
+
+.btnSecondary {
+  background-color: white;
+  color: #19233f;
+}
+
+.btnSecondary:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+}
