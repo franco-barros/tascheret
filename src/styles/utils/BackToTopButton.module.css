@@ -1,13 +1,13 @@
 .backToTopButton {
   position: fixed;
   bottom: 1.25rem;
-  left: 1.25rem; /* izquierda en vez de derecha */
-  background: linear-gradient(135deg, #25d366 0%, #1ebe57 100%);
-  color: white;
+  left: 1.25rem;
+  background: linear-gradient(135deg, #c7ae7d 0%, #d4b883 50%, #e0cda5 100%);
+  color: #19233f;
   padding: 0.75rem;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 14px rgba(25, 35, 63, 0.3);
   z-index: 10000;
   display: flex;
   align-items: center;
@@ -19,11 +19,12 @@
 }
 
 .backToTopButton:hover {
-  background: linear-gradient(135deg, #1ebe57 0%, #25d366 100%);
+  background: linear-gradient(135deg, #d4b883 0%, #c7ae7d 50%, #b79d6d 100%);
   transform: scale(1.1);
 }
 
 .icon {
   font-size: 24px;
   pointer-events: none;
+  color: #19233f;
 }

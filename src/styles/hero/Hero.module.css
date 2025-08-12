@@ -38,6 +38,9 @@
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.3s ease;
+  border: none; /* <--- acá */
+  cursor: pointer;
+  outline: none;
 }
 
 .btnPrimary {

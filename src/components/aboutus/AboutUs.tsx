@@ -89,13 +89,12 @@ const AboutUs: React.FC = () => {
         </div>
 
         {/* Abogados */}
-        <h3 className={styles.subTitle}>
-          <Users
-            size={20}
-            style={{ marginRight: "0.5rem", verticalAlign: "middle" }}
-          />
-          Nuestro Equipo
-        </h3>
+        <div className={styles.badgeWrapper}>
+          <span className={styles.badge}>
+            <Users size={18} style={{ marginRight: "0.4rem" }} />
+            Nuestro Equipo
+          </span>
+        </div>
         <div className={styles.lawyersWrapper}>
           {/* Santiago */}
           <article className={styles.lawyerCard}>

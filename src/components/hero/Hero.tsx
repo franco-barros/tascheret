@@ -1,11 +1,17 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import styles from "../../styles/hero/Hero.module.css";
 
 const Hero: React.FC = () => {
+  const handleScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="hero" className={styles.hero}>
       <motion.div
@@ -19,18 +25,20 @@ const Hero: React.FC = () => {
         </h1>
 
         <div className={styles.buttons}>
-          <Link
-            href="/contacto"
+          <button
+            onClick={() => handleScrollTo("contact")}
             className={`${styles.btn} ${styles.btnPrimary}`}
+            type="button"
           >
             Contactar
-          </Link>
-          <Link
-            href="/areas"
+          </button>
+          <button
+            onClick={() => handleScrollTo("areas")}
             className={`${styles.btn} ${styles.btnSecondary}`}
+            type="button"
           >
             Áreas de Práctica
-          </Link>
+          </button>
         </div>
       </motion.div>
     </section>

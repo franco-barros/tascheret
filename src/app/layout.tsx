@@ -4,20 +4,20 @@ import { Footer } from "../components/footer";
 import { ClientNavbarWrapper } from "../components/clientnavbarwrapper";
 
 export const metadata = {
-  title: "Lic. Iván Waisman | Psicólogo Clínico M.P. 14636",
+  title: "Tascheret - Videla | Abogados Laborales",
   description:
-    "Mejores decisiones, relaciones más sanas y bienestar integral. Psicólogo clínico especializado en depresión, ansiedad, relaciones e intervenciones contextuales.",
-  authors: [{ name: "Lic. Iván Waisman" }],
+    "Estudio jurídico especializado en derecho laboral, accidentes de tránsito y regularización dominial. Asesoramiento profesional para empresas y particulares.",
+  authors: [{ name: "Tascheret - Videla Abogados" }],
   openGraph: {
-    title: "Lic. Iván Waisman | Psicólogo Clínico M.P. 14636",
+    title: "Tascheret - Videla | Abogados Laborales",
     description:
-      "Diplomado en Abordajes Comportamentales Contextuales (ACT, DBT). Experto en depresión, ansiedad, relaciones e intervenciones con Expats. Miembro de ACBS Chapter Argentina.",
-    siteName: "Lic. Iván Waisman",
+      "Soluciones jurídicas claras y personalizadas en derecho laboral, accidentes y regularización de inmuebles. Profesionales con amplia experiencia en San Juan.",
+    siteName: "Tascheret - Videla Abogados",
     locale: "es_AR",
     type: "website",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icons/Icon.png",
   },
 };
 

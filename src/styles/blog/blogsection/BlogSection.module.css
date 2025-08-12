@@ -11,15 +11,16 @@
 .badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  background-color: #d4af37; /* dorado */
-  color: #222;
-  font-weight: 700;
-  padding: 0.35rem 0.8rem;
+  background: linear-gradient(135deg, #c7ae7d 0%, #d4b883 50%, #e0cda5 100%);
   border-radius: 9999px;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-  margin-bottom: 1rem;
-  user-select: none;
+  font-weight: 600;
+  font-family: var(--font-badge);
+  color: #19233f; /* texto oscuro para contraste con el badge claro */
+  margin: 0 auto 1rem;
 }
 
 .title {
