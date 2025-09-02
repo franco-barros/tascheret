@@ -22,17 +22,10 @@
   box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
 }
 
-/* Slider */
-.slider {
-  margin-top: 0.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 0 1rem; /* padding lateral para mobile */
-}
-
 .keen-slider__slide {
-  min-width: 100%; /* fuerza 1 slide por vista en mobile */
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* Tarjeta split */
@@ -57,7 +50,7 @@
   flex-direction: column;
   justify-content: flex-end;
   background: #f6f6f6;
-  height: 500px; /* altura en mobile */
+  height: 500px;
 }
 
 .lawyerImage {
@@ -69,12 +62,15 @@
 .lawyerName {
   position: absolute;
   bottom: 1rem;
-  left: 1rem;
+  left: 50%;
+  transform: translateX(-50%); /* 👈 centrado horizontal */
   color: var(--primary-blue, #19233f);
   font-weight: 700;
   background: rgba(255, 255, 255, 0.6);
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
+  text-align: center;
+  max-width: 90%;
 }
 
 /* Descripción + links */
@@ -83,6 +79,7 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* 👈 empuja bio arriba y redes abajo */
 }
 
 .lawyerBio {
@@ -92,11 +89,14 @@
   margin-bottom: 1rem;
 }
 
+/* Redes sociales al final y centradas */
 .socialLinks {
   display: flex;
+  justify-content: center; /* 👈 centrado */
   gap: 1rem;
   font-size: 1.2rem;
   color: var(--primary-blue, #19233f);
+  margin-top: auto; /* 👈 las empuja al final */
 }
 
 .socialLinks a {
@@ -127,17 +127,16 @@
   }
 
   .lawyerImageSection {
-    height: 400px; /* altura mayor en tablet/mobile */
+    height: 400px;
   }
 
   .lawyerName {
     bottom: 0.5rem;
-    left: 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .lawyerImageSection {
-    height: 450px; /* más altura en mobile pequeño */
+    height: 450px;
   }
 }

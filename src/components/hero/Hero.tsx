@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
             Contactar
           </button>
           <button
-            onClick={() => handleScrollTo("areas")}
+            onClick={() => handleScrollTo("section-practiceareas")}
             className={`${styles.btn} ${styles.btnSecondary}`}
             type="button"
           >

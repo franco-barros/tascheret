@@ -107,7 +107,7 @@ const PracticeAreas: React.FC = () => {
   );
 
   return (
-    <section id="areas" className={styles.practiceAreasSection}>
+    <section id="section-practiceareas" className={styles.practiceAreasSection}>
       <FadeInOnScroll>
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>

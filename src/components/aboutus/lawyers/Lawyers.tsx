@@ -16,8 +16,8 @@ import {
 const Lawyers: React.FC = () => {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    slides: { perView: 1, spacing: 16 }, // 1 por vista en mobile
     mode: "snap",
+    slides: { perView: 1, spacing: 0 }, // 👈 sin spacing en mobile
     breakpoints: {
       "(min-width: 768px)": {
         slides: { perView: 1, spacing: 24 },
