@@ -1,0 +1,40 @@
+/* Wrapper para título centrado */
+.specialtiesTitleWrapper {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Subtítulo de especialidades */
+.specialTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-blue, #19233f);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Tarjetas de especialidades */
+.specialtyCard {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(25, 35, 63, 0.04);
+  padding: 1.25rem;
+  flex: 1 1 280px;
+  color: var(--primary-blue, #19233f);
+  line-height: 1.4;
+  border: 1px solid var(--card-border, rgba(25, 35, 63, 0.06));
+  transition: transform 0.18s ease;
+}
+
+.specialtyCard:hover {
+  transform: translateY(-4px);
+}
+
+.specialtyCard h4 {
+  color: var(--primary-blue, #19233f);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}

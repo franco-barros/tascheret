@@ -1,0 +1,55 @@
+/* ================= MOBILE ================= */
+
+/* Slider Mobile */
+.sliderMobile {
+  display: block;
+  width: 100%;
+  overflow: hidden; /* evita scroll horizontal fuera del slider */
+}
+
+.keen-slider__slide {
+  min-width: 100%; /* 1 tarjeta por slide */
+  max-width: 100%;
+  display: flex;
+  justify-content: center; /* centra la tarjeta */
+  padding: 0 0.5rem; /* pequeño espacio lateral */
+}
+
+/* Ajustes tarjetas en mobile */
+.sliderMobile .areaCard {
+  width: 90%; /* ancho menor al 100% para que no toque bordes */
+  border-radius: 25px; /* más redondeado para mobile */
+  padding: 1.5rem; /* un poco más de padding */
+  margin: 0 auto; /* centrado */
+  box-shadow: 0 4px 16px rgba(25, 35, 63, 0.08); /* sombra ligera */
+  transition: transform 0.18s ease;
+}
+
+.sliderMobile .areaCard:hover {
+  transform: translateY(-2px); /* efecto hover más sutil */
+}
+
+/* Icono centrado */
+.sliderMobile .iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 25px;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(25, 35, 63, 0.05);
+}
+
+/* Texto */
+.sliderMobile .areaCard h4 {
+  text-align: center;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+
+.sliderMobile .areaCard p {
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

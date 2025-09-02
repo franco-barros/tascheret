@@ -1,0 +1,143 @@
+.badgeWrapper {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(
+    --badge-gradient,
+    linear-gradient(135deg, #c7ae7d 0%, #d4b883 50%, #e0cda5 100%)
+  );
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-blue, #19233f);
+  margin: 0 auto 1rem;
+  box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
+}
+
+/* Slider */
+.slider {
+  margin-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem; /* padding lateral para mobile */
+}
+
+.keen-slider__slide {
+  min-width: 100%; /* fuerza 1 slide por vista en mobile */
+}
+
+/* Tarjeta split */
+.lawyerCard {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 6px 22px rgba(25, 35, 63, 0.06);
+  border: 1px solid var(--card-border, rgba(25, 35, 63, 0.06));
+}
+
+/* Imagen + nombre */
+.lawyerImageSection {
+  position: relative;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #f6f6f6;
+  height: 500px; /* altura en mobile */
+}
+
+.lawyerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lawyerName {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: var(--primary-blue, #19233f);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+
+/* Descripción + links */
+.lawyerDescription {
+  width: 60%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.lawyerBio {
+  color: rgba(25, 35, 63, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-blue, #19233f);
+}
+
+.socialLinks a {
+  color: inherit;
+  transition: color 0.18s ease, transform 0.12s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--accent-gold, #c7ae7d);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .lawyerImageSection {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lawyerCard {
+    flex-direction: column;
+  }
+
+  .lawyerImageSection,
+  .lawyerDescription {
+    width: 100%;
+  }
+
+  .lawyerImageSection {
+    height: 400px; /* altura mayor en tablet/mobile */
+  }
+
+  .lawyerName {
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lawyerImageSection {
+    height: 450px; /* más altura en mobile pequeño */
+  }
+}

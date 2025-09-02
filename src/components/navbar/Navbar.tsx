@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <button className={styles.logo} onClick={() => scrollToSection("hero")}>
           <Image
-            src="/icons/Icon.png"
+            src="/icons/logoversionA-4.png"
             alt="Tascheret - Videla"
             width={32}
             height={32}

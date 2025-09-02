@@ -1,0 +1,53 @@
+.aboutSection {
+  --primary-blue: #19233f;
+  --accent-gold: #c7ae7d;
+  --badge-gradient: linear-gradient(
+    135deg,
+    #c7ae7d 0%,
+    #d4b883 50%,
+    #e0cda5 100%
+  );
+  --card-border: rgba(25, 35, 63, 0.06);
+
+  padding: 4rem 1rem;
+  background-color: transparent;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.badgeWrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--badge-gradient);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin: 0 auto 1rem;
+  box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
+}
+
+.description {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--primary-blue);
+  text-align: center;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
