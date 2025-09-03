@@ -8,7 +8,7 @@ import styles from "../../styles/Navbar.module.css";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("hero"); // inicia en hero
 
   const navLinks = useMemo(
     () => [
@@ -32,18 +32,34 @@ const Navbar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
 
-      const scrollPos = window.scrollY + 100;
+      if (window.scrollY === 0) {
+        setActiveSection("hero");
+        return;
+      }
+
+      const midpoint = window.scrollY + window.innerHeight / 2; // punto medio de la pantalla
+
       for (let i = navLinks.length - 1; i >= 0; i--) {
         const section = document.getElementById(navLinks[i].id);
-        if (section && section.offsetTop <= scrollPos) {
-          setActiveSection(navLinks[i].id);
-          break;
+        if (section) {
+          const top = section.offsetTop;
+          const bottom = top + section.offsetHeight;
+
+          // si el punto medio está dentro de la sección
+          if (midpoint >= top && midpoint < bottom) {
+            setActiveSection(navLinks[i].id);
+            break;
+          }
         }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+
+    // aseguramos que arranque en hero
+    setActiveSection("hero");
     handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [navLinks]);
 
