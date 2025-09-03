@@ -16,7 +16,7 @@
 /* Badge centrado */
 .badge {
   display: inline-block;
-  background-color: #c7ae7d;
+  background: linear-gradient(135deg, #c7ae7d, #e6cf9c);
   color: #19233f;
   font-weight: 700;
   padding: 0.3rem 0.8rem;
@@ -49,23 +49,23 @@
   gap: 3rem;
   max-width: 900px;
   margin: 0 auto;
-  justify-content: center; /* centrado horizontal */
-  align-items: stretch; /* para que ambas cards tengan la misma altura */
+  justify-content: center;
+  align-items: stretch;
   text-align: left;
 }
 
 /* Card blanca para ambos lados */
 .card {
-  background-color: #ffffff; /* blanco */
+  background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  color: #19233f; /* texto oscuro para contraste */
+  color: #19233f;
   flex: 1;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  min-width: 320px; /* ancho mínimo */
+  min-width: 320px;
 }
 
 /* Título con iconos en cada card */
@@ -84,7 +84,7 @@
   font-size: 1rem;
   line-height: 1.6;
   display: flex;
-  flex-direction: column; /* default desktop: vertical */
+  flex-direction: column;
   gap: 0.8rem;
 }
 
@@ -115,7 +115,7 @@
   border-radius: 8px;
   border: 1px solid #c7ae7d;
   background-color: transparent;
-  color: #19233f; /* texto oscuro para leer en fondo blanco */
+  color: #19233f;
   font-size: 1rem;
   transition: border 0.3s ease, background-color 0.3s ease;
 }
@@ -132,7 +132,7 @@
   resize: vertical;
 }
 
-/* Botón */
+/* Botón de formulario */
 .submitButton {
   background-color: #c7ae7d;
   color: #19233f;
@@ -143,11 +143,50 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: auto; /* empuja el botón abajo */
+  margin-top: auto;
 }
 
 .submitButton:hover {
   background-color: #b89b64;
+}
+
+/* Card Instagram */
+.instagramCardWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.instagramCard {
+  background-color: #ffffff;
+  color: #19233f;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.instagramCard p {
+  margin-bottom: 1.5rem;
+  color: #19233f;
+}
+
+/* Botón Instagram con gradiente */
+.instagramButton {
+  display: inline-block;
+  background: linear-gradient(135deg, #c7ae7d, #e6cf9c);
+  color: #19233f;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.instagramButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive para pantallas pequeñas */
@@ -163,7 +202,6 @@
     min-width: 100%;
   }
 
-  /* Solo la parte de la descripción (p) en info contacto va de izquierda a derecha en mobile */
   .contactInfo p {
     display: inline-block;
     margin-right: 1.5rem;

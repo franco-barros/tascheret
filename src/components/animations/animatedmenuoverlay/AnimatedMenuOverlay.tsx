@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { createPortal } from "react-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { Scale } from "lucide-react";
 import styles from "../../../styles/animations/AnimatedMenuOverlay.module.css";
 
 interface AnimatedMenuOverlayProps {
@@ -18,59 +18,55 @@ const AnimatedMenuOverlay: React.FC<AnimatedMenuOverlayProps> = ({
   navLinks,
   activeSection,
 }) => {
-  const [visible, setVisible] = useState(true);
+  const [animate, setAnimate] = useState(true);
 
   const handleClose = () => {
-    setVisible(false);
-    setTimeout(onClose, 500); // igual a la duración de la animación
+    setAnimate(false);
+    setTimeout(() => {
+      onClose();
+    }, 500); // debe coincidir con la duración de la animación en CSS
   };
 
-  return createPortal(
-    <AnimatePresence>
-      {visible && (
-        <motion.div
-          className={styles.menuOverlayContainer}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+  const overlayContent = (
+    <div className={styles.menuOverlayContainer}>
+      <div
+        className={`${styles.animatedMenu} ${
+          animate ? styles.open : styles.closing
+        }`}
+      >
+        <button
+          className={styles.closeButton}
+          onClick={handleClose}
+          aria-label="Cerrar menú"
         >
-          <motion.div
-            className={styles.animatedMenu}
-            initial={{ scale: 0.95, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.95, opacity: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-          >
-            <button
-              className={styles.closeButton}
-              onClick={handleClose}
-              aria-label="Cerrar menú"
-            >
-              &times;
-            </button>
+          &times;
+        </button>
 
-            <div className={styles.menuItemsContainer}>
-              {navLinks.map(({ href, label }) => (
-                <button
-                  key={href}
-                  onClick={() => {
-                    scrollToSection(href);
-                    handleClose();
-                  }}
-                  className={`${styles.menuItem} ${
-                    activeSection === href ? styles.activeItem : ""
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>,
-    document.body
+        <div className={styles.menuItemsContainer}>
+          {navLinks.map(({ href, label }) => {
+            const isActive = activeSection === href;
+            return (
+              <button
+                key={href}
+                onClick={() => {
+                  scrollToSection(href);
+                  handleClose();
+                }}
+                className={`${styles.menuItem} ${
+                  isActive ? styles.activeItem : ""
+                }`}
+              >
+                {isActive && <Scale size={18} className={styles.activeIcon} />}{" "}
+                {label}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
+
+  return createPortal(overlayContent, document.body);
 };
 
 export default AnimatedMenuOverlay;

@@ -10,6 +10,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaClock,
+  FaInstagram,
 } from "react-icons/fa";
 
 const ContactMe: React.FC = () => {
@@ -46,58 +47,46 @@ const ContactMe: React.FC = () => {
 
       <FadeInOnScroll delay={0.15}>
         <div className={styles.contactWrapper}>
-          {/* Tarjeta izquierda con título e ícono */}
+          {/* Tarjeta izquierda con info */}
           <div className={`${styles.card} ${styles.contactInfo}`}>
             <h3 className={styles.cardTitle}>
-              <FaInfoCircle
-                style={{ marginRight: "0.5rem", verticalAlign: "middle" }}
-              />
+              <FaInfoCircle style={{ marginRight: "0.5rem" }} />
               Información de Contacto
             </h3>
 
             <h4 className={styles.infoTitle}>
-              <FaMapMarkerAlt
-                style={{ marginRight: "0.5rem", verticalAlign: "middle" }}
-              />
+              <FaMapMarkerAlt style={{ marginRight: "0.5rem" }} />
               Dirección
             </h4>
-            <p>Mitre 309 Este, 2° Piso, Capital,</p>
+            <p>Belgrano 12 (E), 1° piso, Capital,</p>
             <p>San Juan, Argentina</p>
 
             <h4 className={styles.infoTitle}>
-              <FaPhoneAlt
-                style={{ marginRight: "0.5rem", verticalAlign: "middle" }}
-              />
-              Teléfono
+              <FaPhoneAlt style={{ marginRight: "0.5rem" }} />
+              Teléfonos
             </h4>
-            <p>(264) 440-3154</p>
+            <p>2644769484 // 2645041571</p>
 
             <h4 className={styles.infoTitle}>
-              <FaEnvelope
-                style={{ marginRight: "0.5rem", verticalAlign: "middle" }}
-              />
+              <FaEnvelope style={{ marginRight: "0.5rem" }} />
               Correo
             </h4>
             <p>juridicotascheretvidela@gmail.com</p>
 
             <h4 className={styles.infoTitle}>
-              <FaClock
-                style={{ marginRight: "0.5rem", verticalAlign: "middle" }}
-              />
+              <FaClock style={{ marginRight: "0.5rem" }} />
               Horarios
             </h4>
             <p>Lun-Vie: 9:00 – 15:00</p>
           </div>
 
-          {/* Tarjeta derecha con título e ícono */}
+          {/* Tarjeta derecha con formulario */}
           <form
             onSubmit={handleSubmit}
             className={`${styles.card} ${styles.contactForm}`}
           >
             <h3 className={styles.cardTitle}>
-              <FaEnvelopeOpenText
-                style={{ marginRight: "0.5rem", verticalAlign: "middle" }}
-              />
+              <FaEnvelopeOpenText style={{ marginRight: "0.5rem" }} />
               Envíanos un mensaje
             </h3>
 
@@ -131,6 +120,27 @@ const ContactMe: React.FC = () => {
               Enviar Mensaje
             </button>
           </form>
+        </div>
+      </FadeInOnScroll>
+
+      {/* Card independiente de Instagram */}
+      <FadeInOnScroll delay={0.3}>
+        <div className={styles.instagramCardWrapper}>
+          <div className={`${styles.card} ${styles.instagramCard}`}>
+            <h3 className={styles.cardTitle}>
+              <FaInstagram style={{ marginRight: "0.5rem" }} />
+              Seguinos en Instagram
+            </h3>
+            <p>Síguenos para ver nuestras novedades y contenido legal.</p>
+            <a
+              href="https://www.instagram.com/ponetederecho/?hl=es"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.instagramButton}
+            >
+              Seguinos en Instagram
+            </a>
+          </div>
         </div>
       </FadeInOnScroll>
     </section>

@@ -4,7 +4,7 @@ import { Footer } from "../components/footer";
 import { ClientNavbarWrapper } from "../components/clientnavbarwrapper";
 
 export const metadata = {
-  title: "Tascheret - Videla | Abogados Laborales",
+  title: "Tascheret - Videla | Estudio Juridico",
   description:
     "Estudio jurídico especializado en derecho laboral, accidentes de tránsito y regularización dominial. Asesoramiento profesional para empresas y particulares.",
   authors: [{ name: "Tascheret - Videla Abogados" }],
