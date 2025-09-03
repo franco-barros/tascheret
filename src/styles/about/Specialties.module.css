@@ -16,17 +16,33 @@
   margin: 0 auto;
 }
 
-/* Tarjetas de especialidades */
+/* Cada slide local (se aplica a los <article> además de la clase de Keen) */
+.slide {
+  height: 220px; /* alto fijo en mobile */
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  padding: 0;
+}
+
+/* Tarjeta interna - ocupa todo el alto de la slide */
 .specialtyCard {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(25, 35, 63, 0.04);
   padding: 1.25rem;
-  flex: 1 1 280px;
   color: var(--primary-blue, #19233f);
   line-height: 1.4;
   border: 1px solid var(--card-border, rgba(25, 35, 63, 0.06));
   transition: transform 0.18s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%; /* ocupa todo el alto definido por .slide */
+  overflow: auto; /* mobile: permitir scroll interno */
+  box-sizing: border-box;
 }
 
 .specialtyCard:hover {
@@ -42,11 +58,22 @@
 /* Grid para desktop */
 .gridWrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  align-items: start;
 }
 
-/* Dots (esferas de navegación) */
+/* Desktop: ajustar alto y comportamiento del overflow */
+@media (min-width: 1024px) {
+  .slide {
+    height: 260px; /* alto fijo desktop */
+  }
+
+  .specialtyCard {
+    overflow: hidden; /* cortar contenido extra visualmente en desktop */
+  }
+}
+
 /* Dots (esferas de navegación) */
 .dotsWrapper {
   display: flex;
@@ -56,26 +83,28 @@
   flex-shrink: 0;
 }
 
+/* base dot */
 .dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%; /* sigue siendo círculo */
-  border: none; /* 👈 sin bordes */
-  box-shadow: none; /* 👈 sin sombras */
-  background-color: var(--primary-blue, #19233f); /* inactivo */
-  opacity: 0.5; /* 👈 efecto desactivado */
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  background-color: var(--primary-blue, #19233f);
+  opacity: 0.5;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   transform: scale(1);
 }
 
 .dot:hover {
-  opacity: 0.8; /* un poco más visible al hover */
+  opacity: 0.8;
   transform: scale(1.1);
 }
 
-.dot.active {
-  background-color: var(--accent-gold, #c7ae7d); /* activo */
+/* Clase activa LOCAL — usa styles.dotActive en React */
+.dotActive {
+  background-color: var(--accent-gold, #c7ae7d);
   transform: scale(1.2);
   opacity: 1;
 }

@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
             className={styles.logoIcon}
           />
           <span className={styles.logoText}>
-            Tascheret - Videla | Derecho Laboral
+            Tascheret - Videla | Estudio Jurídico
           </span>
         </button>
 

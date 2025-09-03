@@ -83,6 +83,9 @@
   color: #19233f;
   font-size: 1rem;
   line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* default desktop: vertical */
+  gap: 0.8rem;
 }
 
 /* Títulos sección info con íconos */
@@ -152,12 +155,18 @@
   .contactWrapper {
     flex-direction: column;
     text-align: center;
+    gap: 2rem;
   }
-  .contactInfo {
-    margin-bottom: 2rem;
-  }
+
   .card {
     padding: 1.5rem;
     min-width: 100%;
+  }
+
+  /* Solo la parte de la descripción (p) en info contacto va de izquierda a derecha en mobile */
+  .contactInfo p {
+    display: inline-block;
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 }

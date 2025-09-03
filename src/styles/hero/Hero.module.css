@@ -9,7 +9,7 @@
   justify-content: space-between;
   padding: 2rem 1.5rem;
   box-sizing: border-box;
-  background: transparent; /* <- importante: transparente */
+  background: #ffffff; /* <- importante: transparente */
 }
 
 /* capa superior: logo */

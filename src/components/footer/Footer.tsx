@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaInstagram, FaPhoneAlt, FaEnvelope, FaGavel } from "react-icons/fa";
+import { FaGavel } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Footer.module.css";
 
@@ -12,14 +12,20 @@ const Footer = () => {
 
   if (isAdmin) return null;
 
-  const handleInternalLinkClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string
-  ) => {
-    e.preventDefault();
+  // Scroll suave hacia la sección por ID
+  const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
-    section?.scrollIntoView({ behavior: "smooth" });
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
+
+  // Definimos las secciones disponibles
+  const sections = [
+    { id: "hero", label: "Inicio" },
+    { id: "aboutus", label: "Sobre Nosotros" },
+    { id: "faq", label: "Preguntas Frecuentes" },
+  ];
 
   return (
     <footer id="footer" className={styles.footer}>
@@ -36,58 +42,24 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Enlaces y contacto */}
+        {/* Enlaces */}
         {isHome && (
-          <>
-            <div className={styles.section}>
-              <h4 className={styles.subtitle}>Enlaces</h4>
-              <ul className={styles.list}>
-                <li>
-                  <a
-                    href="#aboutus"
-                    onClick={(e) => handleInternalLinkClick(e, "aboutus")}
+          <div className={styles.section}>
+            <h4 className={styles.subtitle}>Enlaces</h4>
+            <ul className={styles.list}>
+              {sections.map((section) => (
+                <li key={section.id}>
+                  <button
+                    type="button"
+                    className={styles.linkButton}
+                    onClick={() => scrollToSection(section.id)}
                   >
-                    Sobre Nosotros
-                  </a>
+                    {section.label}
+                  </button>
                 </li>
-                <li>
-                  <a
-                    href="#specialties"
-                    onClick={(e) => handleInternalLinkClick(e, "specialties")}
-                  >
-                    Especialidades
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#faq"
-                    onClick={(e) => handleInternalLinkClick(e, "faq")}
-                  >
-                    Preguntas Frecuentes
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className={styles.section}>
-              <h4 className={styles.subtitle}>Contacto</h4>
-              <p className={styles.contact}>
-                <FaPhoneAlt /> +54 264 5041571
-              </p>
-              <p className={styles.contact}>
-                <FaEnvelope /> contacto@tascheretvidela.com
-              </p>
-              <a
-                href="https://www.instagram.com/tascheretvidela"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.contact}
-                aria-label="Instagram"
-              >
-                <FaInstagram /> @tascheretvidela
-              </a>
-            </div>
-          </>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
 

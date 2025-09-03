@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import styles from "../../../styles/about/Specialties.module.css";
-import { Briefcase, Car, Home } from "lucide-react";
+import { Briefcase, Car, Home, Activity } from "lucide-react";
 
 /* Hook para detectar media queries */
 function useMediaQuery(query: string): boolean {
@@ -45,34 +45,42 @@ const Specialties: React.FC = () => {
       : {}
   );
 
-  // AutoPlay solo en mobile/tablet 👇
+  // --- AUTOPLAY: solo en mobile/tablet ---
   useEffect(() => {
-    if (!isDesktop) {
-      const interval = setInterval(() => {
-        instanceRef.current?.next();
-      }, 3000);
-      return () => clearInterval(interval);
-    }
+    if (isDesktop) return; // no autoplay en desktop
+    const interval = window.setInterval(() => {
+      instanceRef.current?.next();
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, [instanceRef, isDesktop]);
 
   const specialties = [
     {
       id: 1,
       icon: <Briefcase size={16} style={{ marginRight: "0.5rem" }} />,
-      title: "Laboral",
-      text: "Asesoramiento en contratación de personal, despidos, indemnizaciones, liquidaciones, accidentes y enfermedades inculpables.",
+      title: "Derecho Laboral",
+      text: "Nos especializamos en el asesoramiento y la asistencia jurídica en reclamos extrajudiciales, tanto para personas físicas como jurídicas, en temas relacionados con la contratación de personal, despidos, indemnizaciones, liquidaciones por extinción del contrato de trabajo, suspensiones, reestructuración de personal, accidentes y enfermedades inculpables.",
     },
     {
       id: 2,
-      icon: <Car size={16} style={{ marginRight: "0.5rem" }} />,
-      title: "Accidentes de tránsito",
-      text: "Asistencia a víctimas de accidentes de tránsito en reclamos extrajudiciales y judiciales, buscando la reparación correspondiente.",
+      icon: <Activity size={16} style={{ marginRight: "0.5rem" }} />,
+      title: "Accidentes y Enfermedades laborales",
+      text: "Reclamos por accidentes y enfermedades acaecidos con motivo o como consecuencia de la prestación de tareas. Asistencia ante Superintendencia de Riesgos del Trabajo. Reclamos Judiciales.",
     },
     {
       id: 3,
+      icon: <Car size={16} style={{ marginRight: "0.5rem" }} />,
+      title: "Accidentes de tránsito",
+      text: "Ofrecemos asistencia y acompañamiento a víctimas de accidentes de tránsito, tanto en reclamos extrajudiciales como judiciales, con el objetivo de obtener la reparación correspondiente.",
+    },
+    {
+      id: 4,
       icon: <Home size={16} style={{ marginRight: "0.5rem" }} />,
-      title: "Veinteañales",
-      text: "Reclamos por posesiones veinteañales, orientados a la regularización dominial y saneamiento de títulos de propiedad.",
+      title: "Posesiones Veinteañales",
+      text: "Contamos con experiencia en el acompañamiento de reclamos judiciales en materia de posesiones veinteañales, con el objeto de lograr la regularización dominial y el saneamiento de títulos de propiedad sobre bienes inmuebles.",
     },
   ];
 
@@ -89,11 +97,11 @@ const Specialties: React.FC = () => {
       {/* Mobile/Tablet => Slider */}
       {!isDesktop ? (
         <>
-          <div ref={sliderRef} className="keen-slider">
+          <div ref={sliderRef} className={`keen-slider ${styles.slider}`}>
             {specialties.map((item) => (
               <article
                 key={item.id}
-                className={`keen-slider__slide ${styles.specialtyCard}`}
+                className={`keen-slider__slide ${styles.slide} ${styles.specialtyCard}`}
               >
                 <h4>
                   {item.icon}
@@ -109,11 +117,13 @@ const Specialties: React.FC = () => {
             {specialties.map((item, idx) => (
               <button
                 key={item.id}
+                type="button"
                 onClick={() => instanceRef.current?.moveToIdx(idx)}
                 className={`${styles.dot} ${
-                  currentSlide === idx ? styles.active : ""
+                  currentSlide === idx ? styles.dotActive : ""
                 }`}
                 aria-label={`Ir a la tarjeta ${item.id}`}
+                aria-pressed={currentSlide === idx}
               />
             ))}
           </div>

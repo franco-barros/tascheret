@@ -25,9 +25,9 @@ const faqItems = [
           "Sí, asesoramos y defendemos a trabajadores y empresas por igual.",
       },
       {
-        question: "¿Cuál es el costo de una consulta legal?",
+        question: "¿Qué documentación necesito llevar a la primera consulta?",
         answer:
-          "El costo varía según el caso, te invitamos a solicitar una entrevista para evaluación.",
+          "Recomendamos traer identificación, contratos y cualquier documento relacionado con tu caso.",
       },
     ],
   },
@@ -50,9 +50,9 @@ const faqItems = [
           "Incluyen accidentes y enfermedades inculpables, con derecho a indemnización y tratamiento.",
       },
       {
-        question: "¿Qué trámites debo realizar en caso de despido?",
+        question: "¿Qué pasos seguir si no me pagan horas extras?",
         answer:
-          "Te guiamos en la liquidación, presentación de reclamos y asesoramiento jurídico.",
+          "Te guiamos para reclamar el pago correspondiente y regularizar tu situación laboral de manera legal.",
       },
     ],
   },
@@ -75,9 +75,9 @@ const faqItems = [
           "Proceso legal para regularizar la propiedad de un inmueble tras 20 años de posesión continua.",
       },
       {
-        question: "¿Cuánto tiempo tarda un proceso legal laboral?",
+        question: "¿Qué hago si necesito asesoramiento urgente?",
         answer:
-          "Depende del caso y la jurisdicción, pero generalmente puede extenderse varios meses o años.",
+          "Podés contactarnos inmediatamente por WhatsApp o teléfono para recibir orientación inicial rápida.",
       },
     ],
   },

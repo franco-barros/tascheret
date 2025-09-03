@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className={styles.hero}>
-      {/* Capa superior: logo (Image fill dentro de contenedor controlado) */}
+      {/* Logo */}
       <div className={styles.logoLayer}>
         <div className={styles.logoInner}>
           <Image
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Capa inferior: mensaje y botones */}
+      {/* Mensaje principal y botón */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -35,12 +35,8 @@ const Hero: React.FC = () => {
         className={styles.content}
       >
         <h1 className={styles.title}>
-          Tu tranquilidad, <br /> nuestra prioridad.
-        </h1>
-
-        <p className={styles.subtitle}>
           Te acompañamos en cada paso para defender tus derechos laborales.
-        </p>
+        </h1>
 
         <div className={styles.buttons}>
           <button
@@ -49,13 +45,6 @@ const Hero: React.FC = () => {
             type="button"
           >
             Contactar
-          </button>
-          <button
-            onClick={() => handleScrollTo("section-practiceareas")}
-            className={`${styles.btn} ${styles.btnSecondary}`}
-            type="button"
-          >
-            Áreas de Práctica
           </button>
         </div>
       </motion.div>

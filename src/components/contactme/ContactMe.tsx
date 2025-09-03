@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import styles from "../../styles/utils/ContactMe.module.css";
+import styles from "../../styles/contactme/ContactMe.module.css";
 import { FadeInOnScroll } from "../shared/fadeInonscroll";
 import {
   FaInfoCircle,
@@ -78,7 +78,7 @@ const ContactMe: React.FC = () => {
               />
               Correo
             </h4>
-            <p>estudio@lancianitrincado.com</p>
+            <p>juridicotascheretvidela@gmail.com</p>
 
             <h4 className={styles.infoTitle}>
               <FaClock
