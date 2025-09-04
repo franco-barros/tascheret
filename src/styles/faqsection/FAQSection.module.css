@@ -17,6 +17,7 @@
   font-family: var(--font-badge);
   color: #19233f; /* texto oscuro para contraste con el badge claro */
   margin: 0 auto 1rem;
+  margin-top: 2rem;
 }
 
 .title {
