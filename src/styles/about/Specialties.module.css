@@ -35,11 +35,9 @@
   line-height: 1.4;
   border: 1px solid var(--card-border, rgba(25, 35, 63, 0.06));
   transition: transform 0.18s ease;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   height: 100%; /* ocupa todo el alto definido por .slide */
   overflow: auto; /* mobile: permitir scroll interno */
   box-sizing: border-box;
@@ -71,6 +69,13 @@
 
   .specialtyCard {
     overflow: hidden; /* cortar contenido extra visualmente en desktop */
+  }
+}
+
+/* Mobile: desactivar transición de slides */
+@media (max-width: 1023px) {
+  .slide {
+    transition: none !important;
   }
 }
 

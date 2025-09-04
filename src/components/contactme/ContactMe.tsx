@@ -9,7 +9,6 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
-  FaClock,
   FaInstagram,
 } from "react-icons/fa";
 
@@ -65,19 +64,13 @@ const ContactMe: React.FC = () => {
               <FaPhoneAlt style={{ marginRight: "0.5rem" }} />
               Teléfonos
             </h4>
-            <p>2644769484 // 2645041571</p>
+            <p>2644769484</p>
 
             <h4 className={styles.infoTitle}>
               <FaEnvelope style={{ marginRight: "0.5rem" }} />
               Correo
             </h4>
             <p>juridicotascheretvidela@gmail.com</p>
-
-            <h4 className={styles.infoTitle}>
-              <FaClock style={{ marginRight: "0.5rem" }} />
-              Horarios
-            </h4>
-            <p>Lun-Vie: 9:00 – 15:00</p>
           </div>
 
           {/* Tarjeta derecha con formulario */}

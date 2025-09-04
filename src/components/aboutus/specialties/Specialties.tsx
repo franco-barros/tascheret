@@ -50,7 +50,7 @@ const Specialties: React.FC = () => {
     if (isDesktop) return; // no autoplay en desktop
     const interval = window.setInterval(() => {
       instanceRef.current?.next();
-    }, 3000);
+    }, 7000);
 
     return () => {
       clearInterval(interval);

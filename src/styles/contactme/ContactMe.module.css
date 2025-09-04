@@ -82,21 +82,21 @@
 .contactInfo {
   color: #19233f;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.4; /* más compacto */
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.4rem; /* menos espacio entre elementos */
 }
 
 /* Títulos sección info con íconos */
 .infoTitle {
   color: #c7ae7d;
   font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 0.4rem;
+  margin-top: 0.8rem; /* menos espacio superior */
+  margin-bottom: 0.2rem; /* menos espacio inferior */
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem; /* menos separación entre icono y texto */
 }
 
 /* Formulario */

@@ -56,7 +56,7 @@ const Lawyers: React.FC = () => {
     if (autoplayIntervalRef.current) return;
     autoplayIntervalRef.current = window.setInterval(() => {
       instanceRef.current?.next();
-    }, 3000);
+    }, 7000);
   };
 
   const stopAutoplay = () => {

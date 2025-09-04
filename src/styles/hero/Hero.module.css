@@ -24,9 +24,6 @@
   justify-content: center;
   overflow: hidden;
   position: relative; /* necesario para Image fill */
-  /* opcional fallback background si querés:
-     background: url("/icons/logoversionC-4.png") center top / contain no-repeat;
-  */
 }
 
 /* contenedor directo para next/image (fill) */
@@ -41,14 +38,12 @@
 .content {
   text-align: center;
   color: #ffffff;
-  /* azul principal (opacidad alta para buena legibilidad) */
   background: rgba(25, 35, 63, 0.95);
   padding: 1.5rem;
   border-radius: 12px;
   max-width: 640px;
   margin-bottom: 2rem;
   z-index: 2;
-  /* ligera sombra de texto para reforzar legibilidad sobre la imagen */
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
@@ -113,6 +108,18 @@
 
 /* ----------------- Responsive ----------------- */
 
+/* Desktop: ajustar tamaño del cartel */
+@media (min-width: 1025px) {
+  .content {
+    max-width: 520px; /* más pequeño que antes */
+    padding: 1rem 1.25rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .title {
     font-size: 2.2rem;
@@ -134,10 +141,9 @@
     justify-content: flex-start;
   }
 
-  /* en mobile: reducimos la altura del contenedor para que no tape la pantalla */
   .logoLayer {
-    height: 38vw; /* responde al ancho del viewport */
-    max-height: 220px; /* tope */
+    height: 38vw;
+    max-height: 220px;
     min-height: 120px;
   }
 
