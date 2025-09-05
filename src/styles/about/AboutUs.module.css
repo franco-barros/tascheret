@@ -10,7 +10,7 @@
   --card-border: rgba(25, 35, 63, 0.06);
 
   padding: 4rem 1rem;
-  background-color: var(--background);
+  background-color: #fff;
   max-width: 1200px;
   margin: 0 auto;
   font-family: var(--font-inter); /* cuerpo con Inter */
