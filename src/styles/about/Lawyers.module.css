@@ -35,7 +35,7 @@
 .lawyerCard {
   display: flex;
   flex-direction: column;
-  background: var(--background, #ffffff);
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
@@ -50,7 +50,6 @@
   min-width: 0;
 }
 
-/* Header con nombre */
 .lawyerHeader {
   display: flex;
   justify-content: center;

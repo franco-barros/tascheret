@@ -23,7 +23,6 @@
   text-underline-offset: 6px; /* distancia desde el texto */
 }
 
-/* Cada slide local (se aplica a los <article> además de la clase de Keen) */
 .slide {
   height: 220px;
   box-sizing: border-box;
@@ -35,7 +34,7 @@
 /* Tarjeta interna */
 .specialtyCard {
   position: relative;
-  background: var(--background, #ffffff);
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(25, 35, 63, 0.04);
   padding: 1.25rem;
