@@ -51,34 +51,31 @@ const Specialties: React.FC = () => {
     const interval = window.setInterval(() => {
       instanceRef.current?.next();
     }, 7000);
-
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, [instanceRef, isDesktop]);
 
   const specialties = [
     {
       id: 1,
-      icon: <Briefcase size={16} style={{ marginRight: "0.5rem" }} />,
+      icon: Briefcase,
       title: "Derecho Laboral",
       text: "Nos especializamos en el asesoramiento y la asistencia jurídica en reclamos extrajudiciales, tanto para personas físicas como jurídicas, en temas relacionados con la contratación de personal, despidos, indemnizaciones, liquidaciones por extinción del contrato de trabajo, suspensiones, reestructuración de personal, accidentes y enfermedades inculpables.",
     },
     {
       id: 2,
-      icon: <Activity size={16} style={{ marginRight: "0.5rem" }} />,
-      title: "Accidentes y Enfermedades laborales",
+      icon: Activity,
+      title: "Accidentes de Trabajo y Enfermedades Laborales",
       text: "Reclamos por accidentes y enfermedades acaecidos con motivo o como consecuencia de la prestación de tareas. Asistencia ante Superintendencia de Riesgos del Trabajo. Reclamos Judiciales.",
     },
     {
       id: 3,
-      icon: <Car size={16} style={{ marginRight: "0.5rem" }} />,
+      icon: Car,
       title: "Accidentes de tránsito",
       text: "Ofrecemos asistencia y acompañamiento a víctimas de accidentes de tránsito, tanto en reclamos extrajudiciales como judiciales, con el objetivo de obtener la reparación correspondiente.",
     },
     {
       id: 4,
-      icon: <Home size={16} style={{ marginRight: "0.5rem" }} />,
+      icon: Home,
       title: "Posesiones Veinteañales",
       text: "Contamos con experiencia en el acompañamiento de reclamos judiciales en materia de posesiones veinteañales, con el objeto de lograr la regularización dominial y el saneamiento de títulos de propiedad sobre bienes inmuebles.",
     },
@@ -89,8 +86,8 @@ const Specialties: React.FC = () => {
       {/* Título */}
       <div className={styles.specialtiesTitleWrapper}>
         <h3 className={styles.specialTitle}>
-          <Briefcase size={20} style={{ verticalAlign: "middle" }} />
-          Especialidades
+          <Briefcase size={24} style={{ verticalAlign: "middle" }} />
+          <span className={styles.underlineText}>Especialidades</span>
         </h3>
       </div>
 
@@ -103,11 +100,14 @@ const Specialties: React.FC = () => {
                 key={item.id}
                 className={`keen-slider__slide ${styles.slide} ${styles.specialtyCard}`}
               >
-                <h4>
-                  {item.icon}
-                  {item.title}
-                </h4>
-                <p>{item.text}</p>
+                {/* Icono grande de fondo con gradiente */}
+                <item.icon size={80} className={styles.bgSpecialtyIcon} />
+
+                {/* Contenido principal */}
+                <div className={styles.specialtyCardContent}>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -133,11 +133,11 @@ const Specialties: React.FC = () => {
         <div className={styles.gridWrapper}>
           {specialties.map((item) => (
             <article key={item.id} className={styles.specialtyCard}>
-              <h4>
-                {item.icon}
-                {item.title}
-              </h4>
-              <p>{item.text}</p>
+              <item.icon size={80} className={styles.bgSpecialtyIcon} />
+              <div className={styles.specialtyCardContent}>
+                <h4>{item.title}</h4>
+                <p>{item.text}</p>
+              </div>
             </article>
           ))}
         </div>

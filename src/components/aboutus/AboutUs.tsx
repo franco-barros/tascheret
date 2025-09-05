@@ -19,11 +19,11 @@ const AboutUs: React.FC = () => {
           </span>
         </div>
 
-        <div className={styles.description}>
+        <div className={styles.descriptionCard}>
           Somos un estudio jurídico con sede en San Juan, comprometido con
-          brindar soluciones claras y personalizadas en conflictos laborales,
-          accidentes y regularización de inmuebles. Acompañamos tanto a empresas
-          como particulares en cada etapa del proceso, con un enfoque
+          brindar soluciones claras y personalizadas en: Accidentes de Transito
+          y Laborales y, Regularización dominal de inmuebles . Acompañamos tanto
+          a empresas como particulares en cada etapa del proceso, con un enfoque
           profesional y adaptado a cada necesidad.
         </div>
 

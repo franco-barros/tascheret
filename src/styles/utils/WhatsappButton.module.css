@@ -1,7 +1,7 @@
 .whatsappButton {
   position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 0.55rem;
+  right: 0.55rem;
   background: linear-gradient(135deg, #25d366 0%, #1ebe57 100%);
   color: white;
   padding: 0.75rem;

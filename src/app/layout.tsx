@@ -2,6 +2,20 @@ import "../styles/globals.css";
 import { ReactNode } from "react";
 import { Footer } from "../components/footer";
 import { ClientNavbarWrapper } from "../components/clientnavbarwrapper";
+import { Raleway, Inter } from "next/font/google";
+
+// Declarar fuentes con variables CSS
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-raleway",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+});
 
 export const metadata = {
   title: "Tascheret - Videla | Estudio Juridico",
@@ -25,11 +39,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="es">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    <html lang="es" className={`${raleway.variable} ${inter.variable}`}>
       <body>
         <ClientNavbarWrapper>{children}</ClientNavbarWrapper>
         <Footer />

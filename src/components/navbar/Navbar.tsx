@@ -37,15 +37,13 @@ const Navbar: React.FC = () => {
         return;
       }
 
-      const midpoint = window.scrollY + window.innerHeight / 2; // punto medio de la pantalla
+      const midpoint = window.scrollY + window.innerHeight / 2;
 
       for (let i = navLinks.length - 1; i >= 0; i--) {
         const section = document.getElementById(navLinks[i].id);
         if (section) {
           const top = section.offsetTop;
           const bottom = top + section.offsetHeight;
-
-          // si el punto medio está dentro de la sección
           if (midpoint >= top && midpoint < bottom) {
             setActiveSection(navLinks[i].id);
             break;
@@ -56,7 +54,6 @@ const Navbar: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // aseguramos que arranque en hero
     setActiveSection("hero");
     handleScroll();
 
@@ -73,15 +70,11 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <button className={styles.logo} onClick={() => scrollToSection("hero")}>
           <Image
-            src="/icons/logoversionA-4.png"
+            src="/icons/LogoversiónC-4.png"
             alt="Tascheret - Videla"
-            width={32}
-            height={32}
+            fill
             className={styles.logoIcon}
           />
-          <span className={styles.logoText}>
-            Tascheret - Videla | Estudio Jurídico
-          </span>
         </button>
 
         {/* Links */}

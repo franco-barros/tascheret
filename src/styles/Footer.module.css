@@ -1,9 +1,17 @@
 /* Footer general */
 .footer {
-  background-color: #ffffff; /* fondo blanco */
-  color: #0d1b38; /* azul oscuro principal */
+  background-color: var(--footer-bg, #ffffff); /* fondo blanco por defecto */
+  color: var(--footer-text, #0d1b38); /* azul oscuro principal */
   padding: 2rem 1.5rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(
+    --font-inter,
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif
+  );
+  font-weight: 400;
 }
 
 .content {
@@ -25,26 +33,29 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #0d1b38; /* azul oscuro principal */
+  color: var(--footer-title, #0d1b38);
+  font-family: var(--font-raleway); /* títulos Raleway */
 }
 
 .iconGavel {
-  color: #d4af37; /* dorado para el icono */
+  color: var(--accent-gold, #d4af37); /* dorado para el icono */
 }
 
 .subtitle {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #0d1b38; /* azul oscuro */
-  border-bottom: 1px solid #d4af3750; /* línea dorada semi-transparente */
+  color: var(--footer-subtitle, #0d1b38);
+  border-bottom: 1px solid var(--accent-gold-light, #d4af3750);
   padding-bottom: 0.2rem;
   margin-bottom: 0.5rem;
+  font-family: var(--font-raleway); /* subtítulos Raleway */
 }
 
 .description {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: #1f2d5a; /* celeste suave */
+  color: var(--footer-description, #1f2d5a);
+  font-family: var(--font-inter); /* cuerpo Inter */
 }
 
 .list {
@@ -56,6 +67,7 @@
 .list li {
   margin-bottom: 0.4rem;
   font-size: 0.9rem;
+  font-family: var(--font-inter);
 }
 
 .list li a,
@@ -65,7 +77,7 @@
   padding: 0;
   margin: 0;
   font: inherit;
-  color: #0d1b38; /* azul oscuro */
+  color: var(--footer-link, #0d1b38);
   cursor: pointer;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -73,7 +85,7 @@
 
 .list li a:hover,
 .linkButton:hover {
-  color: #d4af37; /* dorado al pasar el mouse */
+  color: var(--accent-gold, #d4af37);
   text-decoration: underline;
 }
 
@@ -82,15 +94,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid rgba(13, 27, 56, 0.15); /* línea azul suave */
+  border-top: 1px solid var(--footer-border, rgba(13, 27, 56, 0.15));
   padding-top: 1rem;
 }
 
 .copy {
   font-size: 0.8rem;
-  color: #0d1b38; /* azul oscuro */
+  color: var(--footer-copy, #0d1b38);
   text-align: center;
   width: 100%;
+  font-family: var(--font-inter);
+  font-weight: 400;
 }
 
 /* Responsive mobile */

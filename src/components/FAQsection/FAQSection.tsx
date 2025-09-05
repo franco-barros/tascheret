@@ -15,10 +15,6 @@ const FAQSection: React.FC = () => {
           Preguntas Frecuentes
         </div>
 
-        <h2 className={styles.title}>
-          <span>Resuelve tus</span> <span>Dudas</span>
-        </h2>
-
         <p className={styles.description}>
           Encuentra respuestas a las preguntas más comunes sobre asesoría y
           defensa legal laboral.

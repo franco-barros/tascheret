@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { FaGavel } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Footer.module.css";
 
@@ -32,10 +31,6 @@ const Footer = () => {
       <div className={styles.content}>
         {/* Presentación */}
         <div className={styles.section}>
-          <h3 className={styles.title}>
-            <FaGavel className={styles.iconGavel} />
-            Tascheret - Videla | Estudio Jurídico Laboral
-          </h3>
           <p className={styles.description}>
             Brindamos asesoría y defensa legal especializada en derecho laboral
             con compromiso, experiencia y ética profesional.
@@ -66,7 +61,7 @@ const Footer = () => {
       {/* Pie común */}
       <div className={styles.bottomBar}>
         <p className={styles.copy}>
-          © 2024 Tascheret - Videla | Todos los derechos reservados.
+          © 2025 Tascheret - Videla | Todos los derechos reservados.
         </p>
       </div>
     </footer>

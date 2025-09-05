@@ -10,14 +10,17 @@
   --card-border: rgba(25, 35, 63, 0.06);
 
   padding: 4rem 1rem;
-  background-color: #ffffff;
+  background-color: var(--background);
   max-width: 1200px;
   margin: 0 auto;
+  font-family: var(--font-inter); /* cuerpo con Inter */
+  font-weight: 400;
+  color: var(--foreground);
 }
 
 .badgeWrapper {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -30,24 +33,33 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-raleway); /* títulos / badges con Raleway */
+  font-weight: 700;
   color: var(--primary-blue);
   margin: 0 auto 1rem;
   box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
 }
 
-.description {
+/* Card para la descripción */
+.descriptionCard {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   max-width: 900px;
   margin: 0 auto 3rem auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
   color: var(--primary-blue);
   text-align: center;
+  font-family: var(--font-inter);
+  line-height: 1.6;
+  font-weight: 400;
 }
 
+/* Subtítulos */
 .subTitle {
   font-size: 1.5rem;
   color: var(--primary-blue);
+  font-family: var(--font-raleway);
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;

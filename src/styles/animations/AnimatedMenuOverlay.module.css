@@ -7,6 +7,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+  font-family: var(--font-inter); /* Texto general en Inter */
 }
 
 /* Menú con gradiente dorado y animación circular */
@@ -23,6 +24,7 @@
   flex-direction: column;
   overflow-y: auto;
   z-index: 1101;
+  font-family: var(--font-raleway); /* Menu items en Raleway */
 }
 
 .open {
@@ -67,7 +69,9 @@
   cursor: pointer;
   z-index: 1102;
   transition: transform 0.2s ease, color 0.2s ease;
+  font-family: var(--font-raleway); /* Close button en Raleway */
 }
+
 .closeButton:hover {
   transform: scale(1.2);
   color: #b89b64; /* dorado en hover */
@@ -96,6 +100,7 @@
   transform: translateY(20px);
   animation: fadeIn 0.5s forwards;
   transition: background 0.3s ease, color 0.3s ease;
+  font-family: var(--font-raleway); /* Items en Raleway */
 }
 
 .menuItem:hover {

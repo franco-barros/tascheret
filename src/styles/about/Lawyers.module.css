@@ -1,3 +1,4 @@
+/* Badge */
 .badgeWrapper {
   text-align: center;
   margin-top: 2rem;
@@ -16,88 +17,72 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--font-raleway);
+  font-weight: 700;
   color: var(--primary-blue, #19233f);
   margin: 0 auto 1rem;
   box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
 }
 
-/* Keen Slider slides */
-/* Default: desktop layout mantiene padding/margins si había */
-.keen-slider__slide {
-  min-width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  border: none;
+/* Slider wrapper */
+.slider {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* mobile: eliminar padding/margin para que las imágenes no se corten */
-@media (max-width: 768px) {
-  .keen-slider__slide {
-    padding: 0;
-    margin: 0;
-  }
-}
-
-/* Tarjeta split (desktop y mobile) */
+/* Card */
 .lawyerCard {
   display: flex;
-  flex-direction: row;
-  background: #ffffff;
+  flex-direction: column;
+  background: var(--background, #ffffff);
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 100%;
   box-shadow: 0 6px 22px rgba(25, 35, 63, 0.06);
   border: 1px solid var(--card-border, rgba(25, 35, 63, 0.06));
+  padding: 1.25rem;
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  color: var(--foreground, #171717);
+  min-width: 0;
 }
 
-/* Imagen + nombre */
-.lawyerImageSection {
-  position: relative;
-  width: 40%;
+/* Header con nombre */
+.lawyerHeader {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: #f6f6f6;
-  height: 500px; /* default desktop */
-}
-
-.lawyerImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.75rem;
 }
 
 .lawyerName {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
   color: var(--primary-blue, #19233f);
+  font-family: var(--font-raleway);
   font-weight: 700;
-  background: rgba(255, 255, 255, 0.6);
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
+  font-size: 1.05rem;
   text-align: center;
-  max-width: 90%;
 }
 
 /* Descripción + links */
 .lawyerDescription {
-  width: 60%;
-  padding: 1.5rem;
+  width: 100%;
+  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .lawyerBio {
   color: rgba(25, 35, 63, 0.85);
+  font-family: var(--font-inter);
+  font-weight: 400;
   font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin: 0;
 }
 
 /* Redes sociales al final y centradas */
@@ -107,12 +92,17 @@
   gap: 1rem;
   font-size: 1.2rem;
   color: var(--primary-blue, #19233f);
-  margin-top: auto;
+  margin-top: 0.25rem;
 }
 
 .socialLinks a {
   color: inherit;
   transition: color 0.18s ease, transform 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 6px;
 }
 
 .socialLinks a:hover {
@@ -133,12 +123,12 @@
   height: 12px;
   border-radius: 50%;
   border: none;
-  box-shadow: none;
   background-color: var(--primary-blue, #19233f);
   opacity: 0.45;
   cursor: pointer;
   transition: transform 0.18s ease, opacity 0.18s ease,
     background-color 0.18s ease;
+  transform: scale(1);
 }
 
 .dot:hover {
@@ -152,60 +142,33 @@
   opacity: 1;
 }
 
-/* Responsive: tablet / small desktop */
+/* Responsive tweaks */
 @media (max-width: 1024px) {
-  .lawyerImageSection {
-    height: 420px;
-  }
-
-  .lawyerCard {
-    max-width: 720px;
+  .slider {
+    max-width: 100%;
+    padding: 0; /* elimina padding lateral para que no se corte */
   }
 }
 
-/* Responsive: mobile */
 @media (max-width: 768px) {
   .lawyerCard {
-    flex-direction: column;
-    max-width: 100%;
-    margin: 0; /* quitar margin horizontal para slides mobile */
-  }
-
-  .lawyerImageSection,
-  .lawyerDescription {
-    width: 100%;
-  }
-
-  .lawyerImageSection {
-    height: 320px; /* más pequeño en mobile */
-  }
-
-  .lawyerName {
-    bottom: 0.6rem;
-  }
-
-  .lawyerDescription {
     padding: 1rem;
+    width: 100%; /* asegura que ocupe todo el ancho */
+  }
+
+  .lawyerBio {
+    font-size: 0.95rem;
   }
 }
 
-/* Responsive: small mobile */
 @media (max-width: 480px) {
-  .lawyerImageSection {
-    height: 260px;
-  }
-
-  .badgeWrapper {
-    margin-top: 1.2rem;
-    margin-bottom: 1rem;
-  }
-
   .socialLinks {
     font-size: 1rem;
     gap: 0.75rem;
   }
 
-  .lawyerBio {
-    font-size: 0.93rem;
+  .dot {
+    width: 10px;
+    height: 10px;
   }
 }

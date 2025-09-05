@@ -10,6 +10,7 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaInstagram,
+  FaFacebook,
 } from "react-icons/fa";
 
 const ContactMe: React.FC = () => {
@@ -35,10 +36,9 @@ const ContactMe: React.FC = () => {
     <section id="contact" className={styles.contactSection}>
       <FadeInOnScroll>
         <div className={styles.badgeWrapper}>
-          <div className={styles.badge}>@ Contacto</div>
+          <div className={styles.badge}>@ Contacto </div>
         </div>
 
-        <h2 className={styles.heading}>Ponte en Contacto</h2>
         <p className={styles.subHeading}>
           Responderemos tu consulta lo antes posible.
         </p>
@@ -116,23 +116,32 @@ const ContactMe: React.FC = () => {
         </div>
       </FadeInOnScroll>
 
-      {/* Card independiente de Instagram */}
+      {/* Card redes sociales */}
       <FadeInOnScroll delay={0.3}>
-        <div className={styles.instagramCardWrapper}>
-          <div className={`${styles.card} ${styles.instagramCard}`}>
-            <h3 className={styles.cardTitle}>
-              <FaInstagram style={{ marginRight: "0.5rem" }} />
-              Seguinos en Instagram
-            </h3>
-            <p>Síguenos para ver nuestras novedades y contenido legal.</p>
-            <a
-              href="https://www.instagram.com/ponetederecho/?hl=es"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.instagramButton}
-            >
-              Seguinos en Instagram
-            </a>
+        <div className={styles.socialCardWrapper}>
+          <div className={`${styles.card} ${styles.socialCard}`}>
+            <h3 className={styles.cardTitle}>Seguinos en nuestras redes</h3>
+            <p>Mantenete informado con nuestras novedades y contenido legal.</p>
+            <div className={styles.socialButtons}>
+              <a
+                href="https://www.instagram.com/ponetederecho/?hl=es"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.socialButton} ${styles.instagramButton}`}
+              >
+                <FaInstagram style={{ marginRight: "0.5rem" }} />
+                Instagram
+              </a>
+              <a
+                href="https://www.facebook.com/share/1BCYBUXbV8/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${styles.socialButton} ${styles.facebookButton}`}
+              >
+                <FaFacebook style={{ marginRight: "0.5rem" }} />
+                Facebook
+              </a>
+            </div>
           </div>
         </div>
       </FadeInOnScroll>

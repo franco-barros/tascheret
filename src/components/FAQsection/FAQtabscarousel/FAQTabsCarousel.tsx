@@ -20,11 +20,6 @@ const faqItems = [
           "Podés contactarnos por WhatsApp, correo electrónico o mediante el formulario web.",
       },
       {
-        question: "¿Atendemos tanto a empleados como a empleadores?",
-        answer:
-          "Sí, asesoramos y defendemos a trabajadores y empresas por igual.",
-      },
-      {
         question: "¿Qué documentación necesito llevar a la primera consulta?",
         answer:
           "Recomendamos traer identificación, contratos y cualquier documento relacionado con tu caso.",
@@ -40,14 +35,9 @@ const faqItems = [
           "Podemos asesorarte para reclamar indemnizaciones y defender tus derechos laborales.",
       },
       {
-        question: "¿Cómo se gestiona una reestructuración de personal?",
-        answer:
-          "Asistimos a las empresas para que cumplan con la legislación y negocien con los trabajadores.",
-      },
-      {
         question: "¿Qué cubren los accidentes laborales?",
         answer:
-          "Incluyen accidentes y enfermedades inculpables, con derecho a indemnización y tratamiento.",
+          "Incluye accidentes y enfermedades ocurridos con motivo u ocasión de trabajo, con derecho a indemnización, prestaciones dinerarias y tratamiento",
       },
       {
         question: "¿Qué pasos seguir si no me pagan horas extras?",
@@ -63,11 +53,6 @@ const faqItems = [
         question: "¿Qué es un reclamo extrajudicial?",
         answer:
           "Es una gestión previa para resolver conflictos sin iniciar un proceso judicial.",
-      },
-      {
-        question: "¿Cómo se inicia un juicio laboral?",
-        answer:
-          "A través de la presentación de una demanda ante la justicia laboral con asesoría profesional.",
       },
       {
         question: "¿Qué es la posesión veinteañal?",

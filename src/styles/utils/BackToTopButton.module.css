@@ -1,7 +1,7 @@
 .backToTopButton {
   position: fixed;
-  bottom: 1.25rem;
-  left: 1.25rem;
+  bottom: 0.55rem;
+  left: 0.55rem;
   background: linear-gradient(135deg, #c7ae7d 0%, #d4b883 50%, #e0cda5 100%);
   color: #19233f;
   padding: 0.75rem;

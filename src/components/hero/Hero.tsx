@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
       <div className={styles.logoLayer}>
         <div className={styles.logoInner}>
           <Image
-            src="/icons/logoversionC-4.png"
+            src="/icons/LogoversiónC-4.png"
             alt="Logo Tascheret - Videla"
             fill
             sizes="(max-width: 480px) 80vw, (max-width: 768px) 70vw, 1000px"
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
         className={styles.content}
       >
         <h1 className={styles.title}>
-          Te acompañamos en cada paso para defender tus derechos laborales.
+          Te acompañamos en cada paso para defender tus derechos.
         </h1>
 
         <div className={styles.buttons}>

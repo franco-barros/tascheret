@@ -6,28 +6,36 @@
 
 /* Subtítulo de especialidades */
 .specialTitle {
-  font-size: 1.5rem;
+  font-family: var(--font-raleway);
   font-weight: 700;
+  font-size: 1.5rem;
   color: var(--primary-blue, #19233f);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   justify-content: center;
   margin: 0 auto;
+  position: relative;
+
+  /* Subrayado simplificado */
+  text-decoration: underline;
+  text-decoration-color: var(--accent-gold, #c7ae7d);
+  text-underline-offset: 6px; /* distancia desde el texto */
 }
 
 /* Cada slide local (se aplica a los <article> además de la clase de Keen) */
 .slide {
-  height: 220px; /* alto fijo en mobile */
+  height: 220px;
   box-sizing: border-box;
   display: flex;
   align-items: stretch;
   padding: 0;
 }
 
-/* Tarjeta interna - ocupa todo el alto de la slide */
+/* Tarjeta interna */
 .specialtyCard {
-  background: #ffffff;
+  position: relative;
+  background: var(--background, #ffffff);
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(25, 35, 63, 0.04);
   padding: 1.25rem;
@@ -38,9 +46,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100%; /* ocupa todo el alto definido por .slide */
-  overflow: auto; /* mobile: permitir scroll interno */
+  height: 100%;
+  overflow: auto;
   box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-weight: 400;
 }
 
 .specialtyCard:hover {
@@ -48,9 +58,35 @@
 }
 
 .specialtyCard h4 {
-  color: var(--primary-blue, #19233f);
+  font-family: var(--font-raleway);
   font-weight: 700;
+  color: var(--primary-blue, #19233f);
   margin-bottom: 0.5rem;
+
+  /* Subrayado igual que el título principal */
+  text-decoration: underline;
+  text-decoration-color: var(--accent-gold, #c7ae7d);
+  text-underline-offset: 6px; /* distancia desde el texto */
+}
+
+/* Contenido principal encima del icono */
+.specialtyCardContent {
+  position: relative;
+  z-index: 1;
+}
+
+/* Icono grande de fondo con gradiente visible */
+/* Icono grande de fondo con gradiente visible */
+.bgSpecialtyIcon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 6rem; /* tamaño más grande */
+  opacity: 0.25; /* más visible que antes */
+  pointer-events: none;
+  z-index: 0;
+  stroke: #c7ae7d; /* color dorado base */
+  stroke-width: 1.8; /* un poco más grueso */
 }
 
 /* Grid para desktop */
@@ -61,14 +97,14 @@
   align-items: start;
 }
 
-/* Desktop: ajustar alto y comportamiento del overflow */
+/* Desktop: ajustar alto y overflow */
 @media (min-width: 1024px) {
   .slide {
-    height: 260px; /* alto fijo desktop */
+    height: 260px;
   }
 
   .specialtyCard {
-    overflow: hidden; /* cortar contenido extra visualmente en desktop */
+    overflow: hidden;
   }
 }
 
@@ -79,7 +115,7 @@
   }
 }
 
-/* Dots (esferas de navegación) */
+/* Dots (sin cambios) */
 .dotsWrapper {
   display: flex;
   justify-content: center;
@@ -88,7 +124,6 @@
   flex-shrink: 0;
 }
 
-/* base dot */
 .dot {
   width: 12px;
   height: 12px;
@@ -107,7 +142,6 @@
   transform: scale(1.1);
 }
 
-/* Clase activa LOCAL — usa styles.dotActive en React */
 .dotActive {
   background-color: var(--accent-gold, #c7ae7d);
   transform: scale(1.2);
