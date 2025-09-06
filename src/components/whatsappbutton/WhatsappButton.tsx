@@ -29,7 +29,6 @@ const WhatsappButton: React.FC<WhatsappButtonProps> = ({
       aria-label="Contactar por WhatsApp"
     >
       <FaWhatsapp className={styles.icon} />
-      {/* Eliminamos el texto para que quede solo el ícono */}
     </motion.a>
   );
 };

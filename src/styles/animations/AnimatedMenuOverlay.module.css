@@ -1,16 +1,15 @@
 .menuOverlayContainer {
   position: fixed;
   inset: 0;
-  background: rgba(25, 35, 63, 0.85); /* Overlay azul oscuro semitransparente */
+  background: rgba(25, 35, 63, 0.85);
   z-index: 1100;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  font-family: var(--font-inter); /* Texto general en Inter */
+  font-family: var(--font-inter);
 }
 
-/* Menú con gradiente dorado y animación circular */
 .animatedMenu {
   position: absolute;
   top: 0;
@@ -24,7 +23,7 @@
   flex-direction: column;
   overflow-y: auto;
   z-index: 1101;
-  font-family: var(--font-raleway); /* Menu items en Raleway */
+  font-family: var(--font-raleway);
 }
 
 .open {
@@ -57,7 +56,6 @@
   }
 }
 
-/* Botón de cerrar */
 .closeButton {
   position: absolute;
   top: 1rem;
@@ -69,15 +67,14 @@
   cursor: pointer;
   z-index: 1102;
   transition: transform 0.2s ease, color 0.2s ease;
-  font-family: var(--font-raleway); /* Close button en Raleway */
+  font-family: var(--font-raleway);
 }
 
 .closeButton:hover {
   transform: scale(1.2);
-  color: #b89b64; /* dorado en hover */
+  color: #b89b64;
 }
 
-/* Contenedor de items */
 .menuItemsContainer {
   margin-top: 4rem;
   display: flex;
@@ -86,7 +83,6 @@
   align-items: flex-start;
 }
 
-/* Ítems con animación */
 .menuItem {
   background: none;
   border: none;
@@ -100,7 +96,7 @@
   transform: translateY(20px);
   animation: fadeIn 0.5s forwards;
   transition: background 0.3s ease, color 0.3s ease;
-  font-family: var(--font-raleway); /* Items en Raleway */
+  font-family: var(--font-raleway);
 }
 
 .menuItem:hover {
@@ -109,17 +105,16 @@
   transform: scale(1.05);
 }
 
-/* Estado activo */
 .activeItem {
-  color: #19233f; /* texto activo */
+  color: #19233f;
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* espacio entre ícono y texto */
+  gap: 0.5rem;
 }
 
 .activeIcon {
-  color: #19233f; /* dorado */
+  color: #19233f;
   animation: balanceo 1.5s infinite ease-in-out;
 }
 

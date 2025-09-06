@@ -4,7 +4,6 @@ import { Footer } from "../components/footer";
 import { ClientNavbarWrapper } from "../components/clientnavbarwrapper";
 import { Raleway, Inter } from "next/font/google";
 
-// Declarar fuentes con variables CSS
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],

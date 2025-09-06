@@ -11,7 +11,6 @@ const AboutUs: React.FC = () => {
   return (
     <section id="aboutus" className={styles.aboutSection}>
       <FadeInOnScroll>
-        {/* Encabezado Sobre Nosotros */}
         <div className={styles.badgeWrapper}>
           <span className={styles.badge}>
             <Users size={18} style={{ marginRight: "0.4rem" }} />

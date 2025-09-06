@@ -13,7 +13,6 @@
   line-height: 1.5;
 }
 
-/* Logo */
 .logoLayer {
   flex: 0 0 auto;
   width: 100%;
@@ -33,7 +32,6 @@
   display: block;
 }
 
-/* Contenido */
 .content {
   text-align: center;
   color: #ffffff;
@@ -49,7 +47,6 @@
   line-height: 1.5;
 }
 
-/* Tipografía */
 .title {
   font-family: var(--font-raleway) !important;
   font-weight: 700;
@@ -58,7 +55,6 @@
   margin-bottom: 0.75rem;
 }
 
-/* Botones */
 .buttons {
   display: flex;
   justify-content: center;
@@ -94,7 +90,6 @@
   background-color: #b79d6d;
 }
 
-/* Responsive */
 @media (min-width: 1025px) {
   .content {
     max-width: 520px;

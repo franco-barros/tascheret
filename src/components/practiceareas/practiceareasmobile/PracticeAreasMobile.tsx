@@ -19,7 +19,7 @@ interface Props {
 const PracticeAreasMobile: React.FC<Props> = ({ practiceAreas }) => {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    slides: { perView: 1, spacing: 16 }, // Forma correcta
+    slides: { perView: 1, spacing: 16 },
     breakpoints: {
       "(min-width: 768px)": {
         slides: { perView: 1, spacing: 16 },

@@ -13,7 +13,6 @@ const Hero: React.FC = () => {
 
   return (
     <section id="hero" className={styles.hero}>
-      {/* Logo */}
       <div className={styles.logoLayer}>
         <div className={styles.logoInner}>
           <Image
@@ -27,7 +26,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Mensaje principal y botón */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

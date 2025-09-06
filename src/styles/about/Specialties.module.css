@@ -1,10 +1,8 @@
-/* Wrapper para título centrado */
 .specialtiesTitleWrapper {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
-/* Subtítulo de especialidades */
 .specialTitle {
   font-family: var(--font-raleway);
   font-weight: 700;
@@ -16,11 +14,9 @@
   justify-content: center;
   margin: 0 auto;
   position: relative;
-
-  /* Subrayado simplificado */
   text-decoration: underline;
   text-decoration-color: var(--accent-gold, #c7ae7d);
-  text-underline-offset: 6px; /* distancia desde el texto */
+  text-underline-offset: 6px;
 }
 
 .slide {
@@ -31,7 +27,6 @@
   padding: 0;
 }
 
-/* Tarjeta interna */
 .specialtyCard {
   position: relative;
   background: #ffffff;
@@ -61,31 +56,26 @@
   font-weight: 700;
   color: var(--primary-blue, #19233f);
   margin-bottom: 0.5rem;
-
-  /* Subrayado igual que el título principal */
   text-decoration: underline;
   text-decoration-color: var(--accent-gold, #c7ae7d);
-  text-underline-offset: 6px; /* distancia desde el texto */
+  text-underline-offset: 6px;
 }
 
-/* Contenido principal encima del icono */
 .specialtyCardContent {
   position: relative;
   z-index: 1;
 }
 
-/* Icono grande de fondo con gradiente visible */
-/* Icono grande de fondo con gradiente visible */
 .bgSpecialtyIcon {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  font-size: 6rem; /* tamaño más grande */
-  opacity: 0.25; /* más visible que antes */
+  font-size: 6rem;
+  opacity: 0.25;
   pointer-events: none;
   z-index: 0;
-  stroke: #c7ae7d; /* color dorado base */
-  stroke-width: 1.8; /* un poco más grueso */
+  stroke: #c7ae7d;
+  stroke-width: 1.8;
 }
 
 /* Grid para desktop */
@@ -96,7 +86,6 @@
   align-items: start;
 }
 
-/* Desktop: ajustar alto y overflow */
 @media (min-width: 1024px) {
   .slide {
     height: 260px;
@@ -107,14 +96,13 @@
   }
 }
 
-/* Mobile: desactivar transición de slides */
+/* Mobile */
 @media (max-width: 1023px) {
   .slide {
     transition: none !important;
   }
 }
 
-/* Dots (sin cambios) */
 .dotsWrapper {
   display: flex;
   justify-content: center;

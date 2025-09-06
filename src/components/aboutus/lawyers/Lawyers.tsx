@@ -7,7 +7,6 @@ import styles from "../../../styles/about/Lawyers.module.css";
 import { Users } from "lucide-react";
 import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
-/* Hook para detectar desktop */
 function useMediaQuery(query: string): boolean {
   const [matches, setMatches] = useState(false);
   useEffect(() => {
@@ -106,7 +105,6 @@ const Lawyers: React.FC = () => {
 
   return (
     <>
-      {/* Badge (NO TOCAR) */}
       <div className={styles.badgeWrapper}>
         <div className={styles.badge}>
           <Users size={18} style={{ marginRight: "0.4rem" }} />

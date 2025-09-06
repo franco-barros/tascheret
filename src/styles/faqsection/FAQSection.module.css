@@ -1,10 +1,9 @@
 .faqSection {
   padding: 4rem 1.5rem;
-  background-color: #19233f; /* fondo azul oscuro */
+  background-color: #19233f;
   text-align: center;
 }
 
-/* Badge */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -16,29 +15,27 @@
   font-size: 1rem;
   font-family: var(--font-raleway);
   font-weight: 700;
-  color: #19233f; /* texto oscuro para contraste con el badge */
+  color: #19233f;
   margin: 0 auto 1rem;
   margin-top: 0.5rem;
 }
 
-/* Título */
 .title {
   font-size: 2.5rem;
   font-family: var(--font-raleway);
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #c7ae7d; /* título en dorado */
+  color: #c7ae7d;
 }
 
 .title span:first-child {
-  color: #f0d89a; /* dorado más claro para el primer span */
+  color: #f0d89a;
 }
 
 .title span:last-child {
-  color: #c7ae7d; /* dorado estándar */
+  color: #c7ae7d;
 }
 
-/* Descripción */
 .description {
   font-size: 1.1rem;
   font-family: var(--font-inter);

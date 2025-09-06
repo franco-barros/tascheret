@@ -24,7 +24,7 @@ const AnimatedMenuOverlay: React.FC<AnimatedMenuOverlayProps> = ({
     setAnimate(false);
     setTimeout(() => {
       onClose();
-    }, 500); // debe coincidir con la duración de la animación en CSS
+    }, 500);
   };
 
   const overlayContent = (

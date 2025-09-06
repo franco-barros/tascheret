@@ -116,7 +116,6 @@ const ContactMe: React.FC = () => {
         </div>
       </FadeInOnScroll>
 
-      {/* Card redes sociales */}
       <FadeInOnScroll delay={0.3}>
         <div className={styles.socialCardWrapper}>
           <div className={`${styles.card} ${styles.socialCard}`}>

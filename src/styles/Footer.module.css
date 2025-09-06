@@ -1,7 +1,6 @@
-/* Footer general */
 .footer {
-  background-color: var(--footer-bg, #ffffff); /* fondo blanco por defecto */
-  color: var(--footer-text, #0d1b38); /* azul oscuro principal */
+  background-color: var(--footer-bg, #ffffff);
+  color: var(--footer-text, #0d1b38);
   padding: 2rem 1.5rem;
   font-family: var(
     --font-inter,
@@ -34,11 +33,11 @@
   align-items: center;
   gap: 0.5rem;
   color: var(--footer-title, #0d1b38);
-  font-family: var(--font-raleway); /* títulos Raleway */
+  font-family: var(--font-raleway);
 }
 
 .iconGavel {
-  color: var(--accent-gold, #d4af37); /* dorado para el icono */
+  color: var(--accent-gold, #d4af37);
 }
 
 .subtitle {
@@ -48,14 +47,14 @@
   border-bottom: 1px solid var(--accent-gold-light, #d4af3750);
   padding-bottom: 0.2rem;
   margin-bottom: 0.5rem;
-  font-family: var(--font-raleway); /* subtítulos Raleway */
+  font-family: var(--font-raleway);
 }
 
 .description {
   font-size: 0.9rem;
   line-height: 1.4;
   color: var(--footer-description, #1f2d5a);
-  font-family: var(--font-inter); /* cuerpo Inter */
+  font-family: var(--font-inter);
 }
 
 .list {
@@ -107,7 +106,6 @@
   font-weight: 400;
 }
 
-/* Responsive mobile */
 @media (max-width: 768px) {
   .content {
     grid-template-columns: 1fr;

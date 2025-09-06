@@ -45,9 +45,8 @@ const Specialties: React.FC = () => {
       : {}
   );
 
-  // --- AUTOPLAY: solo en mobile/tablet ---
   useEffect(() => {
-    if (isDesktop) return; // no autoplay en desktop
+    if (isDesktop) return;
     const interval = window.setInterval(() => {
       instanceRef.current?.next();
     }, 7000);
@@ -91,7 +90,7 @@ const Specialties: React.FC = () => {
         </h3>
       </div>
 
-      {/* Mobile/Tablet => Slider */}
+      {/* Slider */}
       {!isDesktop ? (
         <>
           <div ref={sliderRef} className={`keen-slider ${styles.slider}`}>
@@ -103,7 +102,6 @@ const Specialties: React.FC = () => {
                 {/* Icono grande de fondo con gradiente */}
                 <item.icon size={80} className={styles.bgSpecialtyIcon} />
 
-                {/* Contenido principal */}
                 <div className={styles.specialtyCardContent}>
                   <h4>{item.title}</h4>
                   <p>{item.text}</p>
@@ -129,7 +127,7 @@ const Specialties: React.FC = () => {
           </div>
         </>
       ) : (
-        /* Desktop => Grid */
+        /*  Grid */
         <div className={styles.gridWrapper}>
           {specialties.map((item) => (
             <article key={item.id} className={styles.specialtyCard}>

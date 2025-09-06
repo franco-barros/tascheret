@@ -13,7 +13,7 @@
   background-color: #fff;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: var(--font-inter); /* cuerpo con Inter */
+  font-family: var(--font-inter);
   font-weight: 400;
   color: var(--foreground);
 }
@@ -33,14 +33,13 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-family: var(--font-raleway); /* títulos / badges con Raleway */
+  font-family: var(--font-raleway);
   font-weight: 700;
   color: var(--primary-blue);
   margin: 0 auto 1rem;
   box-shadow: 0 6px 18px rgba(199, 174, 125, 0.12);
 }
 
-/* Card para la descripción */
 .descriptionCard {
   background-color: #ffffff;
   padding: 2rem;
@@ -55,7 +54,6 @@
   font-weight: 400;
 }
 
-/* Subtítulos */
 .subTitle {
   font-size: 1.5rem;
   color: var(--primary-blue);

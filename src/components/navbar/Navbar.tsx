@@ -8,7 +8,7 @@ import styles from "../../styles/Navbar.module.css";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero"); // inicia en hero
+  const [activeSection, setActiveSection] = useState("hero");
 
   const navLinks = useMemo(
     () => [
@@ -77,7 +77,6 @@ const Navbar: React.FC = () => {
           />
         </button>
 
-        {/* Links */}
         <div className={styles.links}>
           {navLinks.map((link, index) => (
             <button

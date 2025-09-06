@@ -1,4 +1,3 @@
-/* Contenedor general */
 .contactSection {
   padding: 4rem 1.5rem;
   background-color: var(--primary-blue, #19233f);
@@ -6,7 +5,6 @@
   text-align: center;
 }
 
-/* Wrapper para centrar badge */
 .badgeWrapper {
   display: flex;
   justify-content: center;
@@ -14,7 +12,6 @@
   margin-top: 1rem;
 }
 
-/* Badge centrado */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -24,34 +21,31 @@
   border-radius: 9999px;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  font-family: var(--font-raleway); /* badge/títulos */
+  font-family: var(--font-raleway);
   font-weight: 700;
   color: #19233f;
   margin: 0 auto 1rem;
   margin-top: 0.5rem;
 }
 
-/* Título */
 .heading {
   font-size: 2.5rem;
-  font-family: var(--font-raleway); /* títulos */
+  font-family: var(--font-raleway);
   color: var(--accent-gold, #c7ae7d);
   margin-bottom: 0.5rem;
   text-align: center;
   font-weight: 700;
 }
 
-/* Subtítulo */
 .subHeading {
   font-size: 1.1rem;
-  font-family: var(--font-inter); /* cuerpo */
+  font-family: var(--font-inter);
   font-weight: 400;
   color: var(--text-light-alt, #e0d6b9);
   margin-bottom: 2.5rem;
   text-align: center;
 }
 
-/* Contenedor columnas info + formulario */
 .contactWrapper {
   display: flex;
   gap: 3rem;
@@ -62,7 +56,6 @@
   text-align: left;
 }
 
-/* Card blanca para ambos lados */
 .card {
   background-color: var(--card-bg, #ffffff);
   border-radius: 12px;
@@ -78,7 +71,6 @@
   font-weight: 400;
 }
 
-/* Título con iconos en cada card */
 .cardTitle {
   font-size: 1.5rem;
   font-family: var(--font-raleway);
@@ -89,7 +81,6 @@
   align-items: center;
 }
 
-/* Centrar título en card de redes */
 .socialCard .cardTitle {
   justify-content: center;
   text-decoration: underline;
@@ -97,7 +88,6 @@
   text-underline-offset: 6px;
 }
 
-/* Info contacto */
 .contactInfo {
   color: var(--primary-blue, #19233f);
   font-size: 1rem;
@@ -108,7 +98,6 @@
   font-family: var(--font-inter);
 }
 
-/* Títulos sección info con íconos */
 .infoTitle {
   color: var(--accent-gold, #c7ae7d);
   font-weight: 700;
@@ -120,17 +109,15 @@
   font-family: var(--font-raleway);
 }
 
-/* Formulario */
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* reducido para card más compacta */
+  gap: 1rem;
   max-width: 100%;
   flex-grow: 1;
-  padding: 1.5rem; /* reducido para card más compacta */
+  padding: 1.5rem;
 }
 
-/* Inputs y textarea */
 .inputField,
 .textAreaField {
   padding: 0.9rem 1rem;
@@ -155,7 +142,6 @@
   resize: vertical;
 }
 
-/* Botón de formulario */
 .submitButton {
   background-color: var(--accent-gold, #c7ae7d);
   color: var(--primary-blue, #19233f);
@@ -174,7 +160,6 @@
   background-color: #b89b64;
 }
 
-/* Card redes sociales */
 .socialCardWrapper {
   display: flex;
   justify-content: center;
@@ -192,12 +177,10 @@
   font-family: var(--font-inter);
 }
 
-/* Separación descripción y botones */
 .socialCard p {
-  margin-bottom: 1.5rem; /* más espacio entre descripción y botones */
+  margin-bottom: 1.5rem;
 }
 
-/* Contenedor de botones */
 .socialButtons {
   display: flex;
   justify-content: center;
@@ -206,7 +189,6 @@
   flex-wrap: wrap;
 }
 
-/* Botones de redes */
 .socialButton {
   display: flex;
   align-items: center;
@@ -236,7 +218,6 @@
   margin-right: 0.5rem;
 }
 
-/* Estilos específicos por red */
 .instagramButton {
   background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
   color: #fff;
@@ -249,7 +230,6 @@
   border: none;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .contactWrapper {
     flex-direction: column;
