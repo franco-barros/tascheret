@@ -12,6 +12,7 @@ import {
   FaInstagram,
   FaFacebook,
 } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
 
 const ContactMe: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -20,20 +21,47 @@ const ContactMe: React.FC = () => {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert("Formulario enviado (demo)");
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        toast.error(data.error || "Error al enviar el mensaje.");
+        return;
+      }
+
+      toast.success("Mensaje enviado con éxito");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      toast.error("Error en el servidor. Intenta de nuevo más tarde.");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <section id="contact" className={styles.contactSection}>
+      {/* 📌 Contenedor de notificaciones */}
+      <Toaster position="top-center" reverseOrder={false} />
+
       <FadeInOnScroll>
         <div className={styles.badgeWrapper}>
           <div className={styles.badge}>@ Contacto </div>
@@ -109,8 +137,13 @@ const ContactMe: React.FC = () => {
               required
               className={styles.textAreaField}
             />
-            <button type="submit" className={styles.submitButton}>
-              Enviar Mensaje
+            <button
+              type="submit"
+              className={styles.submitButton}
+              disabled={loading}
+            >
+              {loading && <span className={styles.spinner}></span>}
+              {loading ? "Enviando..." : "Enviar Mensaje"}
             </button>
           </form>
         </div>
