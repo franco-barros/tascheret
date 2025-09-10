@@ -85,7 +85,7 @@ const ContactMe: React.FC = () => {
               <FaMapMarkerAlt style={{ marginRight: "0.5rem" }} />
               Dirección
             </h4>
-            <p>Belgrano 12 (E), 1° piso, Capital,</p>
+            <p>Santa Fé 110 (o)</p>
             <p>San Juan, Argentina</p>
 
             <h4 className={styles.infoTitle}>

@@ -58,13 +58,13 @@ const Specialties: React.FC = () => {
       id: 1,
       icon: Briefcase,
       title: "Derecho Laboral",
-      text: "Nos especializamos en el asesoramiento y la asistencia jurídica en reclamos extrajudiciales, tanto para personas físicas como jurídicas, en temas relacionados con la contratación de personal, despidos, indemnizaciones, liquidaciones por extinción del contrato de trabajo, suspensiones, reestructuración de personal, accidentes y enfermedades inculpables.",
+      text: "Nos especializamos en el asesoramiento y la asistencia jurídica en reclamos extrajudiciales, tanto para personas fisicas como jurídicas, en temas relacionados con la contratación de personal, despidos, indemnizaciones, liquidaciones por extinción del contrato de trabajo, suspensiones y reestructuración de personal.",
     },
     {
       id: 2,
       icon: Activity,
       title: "Accidentes de Trabajo y Enfermedades Laborales",
-      text: "Reclamos por accidentes y enfermedades acaecidos con motivo o como consecuencia de la prestación de tareas. Asistencia ante Superintendencia de Riesgos del Trabajo. Reclamos Judiciales.",
+      text: "Reclamos por accidentes y enfermedades inculpables acaecidos con motivo o como consecuencia de la prestación de tareas. Asistencia ante Superintendencia de Riesgos del Trabajo. Reclamos Judiciales.",
     },
     {
       id: 3,

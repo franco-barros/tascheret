@@ -30,7 +30,7 @@ const Footer = () => {
         <div className={styles.section}>
           <p className={styles.description}>
             Brindamos asesoría y defensa legal especializada en derecho laboral
-            con compromiso, experiencia y ética profesional.
+            y civil con compromiso, experiencia y ética profesional.
           </p>
         </div>
 

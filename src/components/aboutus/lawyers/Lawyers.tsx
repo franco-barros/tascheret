@@ -94,7 +94,7 @@ const Lawyers: React.FC = () => {
     {
       id: 2,
       name: "Dr. Ignacio Videla Nicolás",
-      bio: "Abogado especializado en Derecho Laboral, con sólida formación académica y amplia experiencia en el ejercicio profesional. Graduado de la Universidad Empresarial Siglo 21, ha completado diplomaturas y cursos de especialización en derecho laboral. Su trayectoria incluye el ejercicio independiente, asesoramiento jurídico a empresas y trabajadores. Reconocido por su compromiso, actualización constante y enfoque práctico en la defensa de los derechos laborales.",
+      bio: "Abogado especializado en Derecho Laboral, con sólida formación académica y amplia experiencia en el ejercicio profesional. Graduado de la Universidad Empresarial Siglo 21, ha completado cursos de especialización en derecho laboral. Su trayectoria incluye el ejercicio independiente, asesoramiento jurídico a empresas y trabajadores. Reconocido por su compromiso, actualización constante y enfoque práctico en la defensa de los derechos laborales.",
       social: {
         whatsapp: "https://wa.me/2644769484",
         linkedin:
