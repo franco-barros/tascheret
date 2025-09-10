@@ -156,7 +156,7 @@ const ContactMe: React.FC = () => {
             <p>Mantenete informado con nuestras novedades y contenido legal.</p>
             <div className={styles.socialButtons}>
               <a
-                href="https://www.instagram.com/ponetederecho/?hl=es"
+                href="https://www.instagram.com/tascheretvidela.juridico/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${styles.socialButton} ${styles.instagramButton}`}

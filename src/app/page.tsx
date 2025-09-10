@@ -12,7 +12,7 @@ export default function Home() {
       <AboutUs />
       <FAQSection />
       <ContactMe />
-      <WhatsappButton phoneNumber="12345678" />
+      <WhatsappButton phoneNumber="2644769484" />
       <BackToTopButton />
     </>
   );
